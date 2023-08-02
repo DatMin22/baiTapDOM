@@ -18,22 +18,22 @@ function calculator() {
 
 // bài 2: tính tiền lương
 function calculatorSalary() {
-    var salaryOneDay = 100;
+    var salaryOneDay = 100000;
     var numOfDayWork = +document.getElementById("numOfDayWork").value;
 
     var salary = numOfDayWork * salaryOneDay;
     var result2 = document.getElementById("result2");
-    result2.innerHTML = salary;
+    result2.innerHTML = new Intl.NumberFormat('de-VN', { style: 'currency', currency: 'VND' }).format(salary);
 };
 
 //-----------------------------------------------
 // bài 3: Quy đổi tiền
 function convertMoney() {
-    const ONE_USD = 23.500;
+    const ONE_USD = 23500;
     var USD = document.getElementById("usd").value;
     var moneyAfterConvert = USD * ONE_USD;
     var result3 = document.getElementById("result3");
-    result3.innerHTML = moneyAfterConvert;
+    result3.innerHTML =new Intl.NumberFormat('de-VN', { style: 'currency', currency: 'VND' }).format(moneyAfterConvert) ;
 };
 
 
